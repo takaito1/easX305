@@ -6,8 +6,8 @@ sympy
 xlrd==1.1.0
 tqdm==4.46.0
 watermark==2.0.2
-python-wget
 shapely
+cartopy
 gsw
 netCDF4
 xarray
