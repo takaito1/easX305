@@ -4,10 +4,6 @@ scipy==1.4.1
 pandas
 sympy
 xlrd==1.1.0
-tqdm==4.46.0
-watermark==2.0.2
-shapely
-cartopy
 gsw
 netCDF4
 xarray
