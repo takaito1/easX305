@@ -6,7 +6,7 @@ sympy
 xlrd==1.1.0
 tqdm==4.46.0
 watermark==2.0.2
-python-wget==3.2
+python-wget
 shapely
 gsw
 netCDF4
