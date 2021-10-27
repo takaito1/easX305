@@ -3,7 +3,11 @@ matplotlib==3.2.1
 scipy==1.4.1
 pandas
 sympy
+xlrd==1.1.0
+tqdm==4.46.0
+watermark==2.0.2
+python-wget==3.2
+shapely
 gsw
 netCDF4
-cartopy
 xarray
