@@ -1,4 +1,4 @@
-%% Week10 Redfield ratio in the P18 cruise
+%% Week10: Redfield ratio in the P18 cruise
 % (recycled from Week2)
 
 % safety first
@@ -20,12 +20,17 @@ ct=gsw_CT_from_t(sa,CTDTMP,CTDPRS);
 % then sigma theta
 st=gsw_sigma0(sa,ct);
 %%
-% perform linear regression NO3 onto PO4
-ind=(NITRAT_FLAG_W==2) & (PHSPHT_FLAG_W==2);
-
+% Select the desired data
+isgood=(NITRAT_FLAG_W==2) & (PHSPHT_FLAG_W==2);
+isoxic=OXYGEN>20;
+ind=(isgood==true)&(isoxic==true);
+% trim the data
 x=PHSPHT(ind);
+xlab='P';
 y=NITRAT(ind);
-
+ylab='N';
+%%
+% perform linear regression NO3 onto PO4
 c=cov(x,y);
 a=c(1,2)/c(1,1); % slope
 b=mean(y)-a*mean(x); % intercept
@@ -34,7 +39,6 @@ b=mean(y)-a*mean(x); % intercept
 r2=c(1,2)^2/c(1,1)/c(2,2);
 %%
 % plotting
-
 % expand the linear regression
 x0=linspace(0,3,20);
 y0=a*x0+b;
@@ -45,4 +49,4 @@ hold on;
 plot(x0,y0,'r-','linewidth',3);
 xlabel('phosphate, umol/kg')
 ylabel('nitrate, umol/kg')
-disp(['P:N ratio is ',num2str(a,3),' and R2 value is ',num2str(r2,3)]);
+disp(['N:P ratio is ',num2str(a,3),' and R2 value is ',num2str(r2,3)]);
