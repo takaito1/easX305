@@ -8,5 +8,3 @@ Week 11/12: Satellite estimates of NPP: [MATLAB script](https://github.com/takai
 
 Week 14: Carbon-Alkalinity-Phosphate box model: [python script](https://github.com/takaito1/easX305/blob/main/CAPboxmodel.ipynb), 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/takaito1/easX305/HEAD?labpath=CAPboxmodel.ipynb)
-
-![title](boxmodel.png)
